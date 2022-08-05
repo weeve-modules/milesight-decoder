@@ -28,6 +28,19 @@ const send = async result => {
   }
 }
 
+const hexToBytes = hexString => {
+  if (hexString.length % 2 !== 0) {
+    throw 'Must have an even number of hex digits to convert to bytes'
+  } /* w w w.  jav  a2 s .  c o  m*/
+  var numBytes = hexString.length / 2
+  var byteArray = new Uint8Array(numBytes)
+  for (var i = 0; i < numBytes; i++) {
+    byteArray[i] = parseInt(hexString.substr(i * 2, 2), 16)
+  }
+  return byteArray
+}
+
 module.exports = {
   send,
+  hexToBytes,
 }

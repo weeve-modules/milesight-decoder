@@ -3,7 +3,7 @@ const express = require('express')
 const app = express()
 const winston = require('winston')
 const expressWinston = require('express-winston')
-const { send } = require('./utils/util')
+const { send, hexToBytes } = require('./utils/util')
 
 // initialization
 app.use(express.urlencoded({ extended: true }))
@@ -60,7 +60,7 @@ app.post('/', async (req, res) => {
   try {
     const { Decode } = require(`./utils/${DEVICE_DECODER}.js`)
     const port = inputPayload.fPort || inputPayload.port || 0
-    const data = inputPayload.data || inputPayload
+    const data = hexToBytes(inputPayload.data || inputPayload)
     const outputPayload = Decode(port, data)
     if (EGRESS_URLS) {
       await send(outputPayload)

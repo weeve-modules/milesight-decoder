@@ -19,109 +19,36 @@
 
 Milesite Decoder decodes payloads for Milesight IoT sensors in ttn or chirpstack based platform. Payload depends on sensor type and platform. Based on decoder functions https://github.com/Milesight-IoT/SensorDecoders
 
-- Depending on environment variables NESTED_RESPONSE & CUSTOM_FIELDS out can be nestd with few fields or with all fields in "data" property, for example:
-- - when nested without custom fields
+Example of incoming payload may look like this:
 
 ```js
 {
-  timestamp: '1647945089527',
-  devEUI: '70b3d52dd3003e30',
-  deviceName: '70B3D52DD3003E30',
-  data: {
-    reason: 1,
-    targetTemperature: 0,
-    sensorTemperature: 12.8515625,
-    relativeHumidity: 0.78125,
-    motorRange: 3587,
-    motorPosition: 3903,
-    batteryVoltage: 2,
-    openWindow: false,
-    childLock: true,
-    highMotorConsumption: true,
-    lowMotorConsumption: true,
-    brokenSensor: true
-  }
+	"data": "01755C03673401046865056A490006651C0079001400077DE704087D070009733F27"
 }
+
 ```
 
-- - when nested with custom fields
+- Depending on device type selected output may be different but it's usually formed like this:
 
 ```js
 {
-  timestamp: '1647945089527',
-  devEUI: '70b3d52dd3003e30',
-  deviceName: '70B3D52DD3003E30',
-  data: {
-    targetTemperature: 0,
-  }
+	"battery": 92,
+	"temperature": 30.8,
+	"humidity": 50.5,
+	"activity": 73,
+	"illumination": 28,
+	"infrared_and_visible": 121,
+	"infrared": 20,
+	"co2": 1255,
+	"tvoc": 7,
+	"pressure": 1004.7
 }
 ```
-
-- - when not nested without custom fields
-
-```js
-{
-  timestamp: '1647945089527',
-  devEUI: '70b3d52dd3003e30',
-  deviceName: '70B3D52DD3003E30',
-  reason: 1,
-  targetTemperature: 0,
-  sensorTemperature: 12.8515625,
-  relativeHumidity: 0.78125,
-  motorRange: 3587,
-  motorPosition: 3903,
-  batteryVoltage: 2,
-  openWindow: false,
-  childLock: true,
-  highMotorConsumption: true,
-  lowMotorConsumption: true,
-  brokenSensor: true
-}
-```
-
-- - when nested without custom fields
-
-```js
-{
-  timestamp: '1647945089527',
-  devEUI: '70b3d52dd3003e30',
-  deviceName: '70B3D52DD3003E30',
-  data: {
-    reason: 1,
-    targetTemperature: 0,
-    sensorTemperature: 12.8515625,
-    relativeHumidity: 0.78125,
-    motorRange: 3587,
-    motorPosition: 3903,
-    batteryVoltage: 2,
-    openWindow: false,
-    childLock: true,
-    highMotorConsumption: true,
-    lowMotorConsumption: true,
-    brokenSensor: true
-  }
-}
-```
-
-- - when nested with custom fields
-
-```js
-{
-  timestamp: '1647945089527',
-  devEUI: '70b3d52dd3003e30',
-  deviceName: '70B3D52DD3003E30',
-  data: {
-    targetTemperature: 0,
-  }
-}
-```
-
 ## Environment Variables
 
 | Environment Variables | type | Description |
 | --- | --- | --- |
-| NESTED_RESPONSE | string | yes/no enum type, determines if sensor "date" property will be passed in data property or if properties will be extracted as single items and passed with rest of the payload |
-| CUSTOM_FIELDS | string | comma separated names of fields that user wants to pass to next module, if ommited, all fields from "data" property will be passed |
+| DEVICE_DECODER | string | Drop down list with all currently supported device type decoders based on which we decode the payloads. |
 
 ### Module Specific
 
