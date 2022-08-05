@@ -44,6 +44,7 @@ Example of incoming payload may look like this:
 	"pressure": 1004.7
 }
 ```
+
 ## Environment Variables
 
 | Environment Variables | type | Description |
