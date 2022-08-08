@@ -1,4 +1,4 @@
-const { EGRESS_URLS, INGRESS_HOST, INGRESS_PORT, MODULE_NAME, DEVICE_DECODER } = require('./config/config.js')
+const { EGRESS_URLS, INGRESS_HOST, INGRESS_PORT, MODULE_NAME, DEVICE_DECODER, LABEL } = require('./config/config.js')
 const express = require('express')
 const app = express()
 const winston = require('winston')
@@ -60,7 +60,7 @@ app.post('/', async (req, res) => {
   try {
     const { Decode } = require(`./utils/${DEVICE_DECODER}.js`)
     const port = inputPayload.fPort || inputPayload.port || 0
-    const data = hexToBytes(inputPayload.data || inputPayload)
+    const data = hexToBytes(LABEL ? inputPayload[LABEL] : inputPayload)
     const outputPayload = Decode(port, data)
     if (EGRESS_URLS) {
       await send(outputPayload)

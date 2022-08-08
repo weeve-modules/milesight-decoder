@@ -13,6 +13,13 @@ image:
   homepage: 'https://hub.docker.com/r/weevenetwork/milesight-decoder'      # Image homepage from the docker registry.
 repository: 'https://github.com/weeve-modules/milesight-decoder'     # Repository URL to source code.
 envs:                                   # Array of environment variables that will be used to configure the module. Also used to show related fields on the UI.
+  - name: Input Label
+    key: LABEL
+    description: Name of the property in incoming payload that holds the data.
+    value: ''
+    type: 'text'
+    options: []
+    dependencies: []
   - name: Device type decoder
     key: DEVICE_DECODER
     description: Select device type decoder
