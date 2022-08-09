@@ -58,7 +58,8 @@ app.post('/', async (req, res) => {
     inputPayload = json.payload
   }
   try {
-    const { Decode } = require(`./utils/${DEVICE_DECODER}.js`)
+    const decoderFile = `${DEVICE_DECODER.split(' | ').join('\\')}.js`
+    const { Decode } = require(`./utils/${decoderFile}`)
     const port = inputPayload.fPort || inputPayload.port || 0
     const data = hexToBytes(LABEL ? inputPayload[LABEL] : inputPayload)
     const outputPayload = Decode(port, data)

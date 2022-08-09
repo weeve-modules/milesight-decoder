@@ -26,71 +26,71 @@ envs:                                   # Array of environment variables that wi
     value: ''
     type: 'select'
     options:
-      - AM100_Series\AM100_Chirpstack
-      - AM100_Series\AM100_TTN
-      - AM300_Series\AM300_Chirpstack
-      - AM300_Series\AM300_TTN
-      - EM300_Series\EM300-MCS\EM300-MCS_Chirpstack
-      - EM300_Series\EM300-MCS\EM300-MCS_TTN
-      - EM300_Series\EM300-SLD\EM300-SLD_Chirpstack
-      - EM300_Series\EM300-SLD\EM300-SLD_TTN
-      - EM300_Series\EM300-TH\EM300-TH_Chirpstack
-      - EM300_Series\EM300-TH\EM300-TH_TTN
-      - EM310_Series\EM310-TILT\EM310-TILT_Chirpstack
-      - EM310_Series\EM310-TILT\EM310-TILT_TTN
-      - EM310_Series\EM310_UDL\EM310-UDL_Chirpstack
-      - EM310_Series\EM310_UDL\EM310-UDL_TTN
-      - EM500_Series\EM500-CO2\EM500-CO2_Chirpstack
-      - EM500_Series\EM500-CO2\EM500-CO2_TTN
-      - EM500_Series\EM500-LGT\EM500-LGT_Chirpstack
-      - EM500_Series\EM500-LGT\EM500-LGT_TTN
-      - EM500_Series\EM500-PP\EM500-PP_Chirpstack
-      - EM500_Series\EM500-PP\EM500-PP_TTN
-      - EM500_Series\EM500-PT100\EM500-PT100_Chirpstack
-      - EM500_Series\EM500-PT100\EM500-PT100_TTN
-      - EM500_Series\EM500-SMT\EM500-SMTC_Chirpstack
-      - EM500_Series\EM500-SMT\EM500-SMTC_TTN
-      - EM500_Series\EM500-SWL\EM500-SWL_Chirpstack
-      - EM500_Series\EM500-SWL\EM500-SWL_TTN
-      - EM500_Series\EM500-UDL\EM500-UDL_Chirpstack
-      - EM500_Series\EM500-UDL\EM500-UDL_TTN
-      - GS_Series\GS101\GS101_Chirpstack
-      - GS_Series\GS101\GS101_TTN
-      - GS_Series\GS534N\GS534N_Chirpstack
-      - GS_Series\GS534N\GS534N_TTN
-      - UC100\UC100_Chirpstack
-      - UC100\UC100_TTN
-      - UC11-N1\UC11-N1_Chirpstack
-      - UC11-N1\UC11-N1_TTN
-      - UC11-T1\UC11-T1_Chirpstack
-      - UC11-T1\UC11-T1_TTN
-      - UC11XX\UC11XX_Decoder_Chirpstack
-      - UC11XX\UC11XX_Decoder_TTN
-      - UC300\UC300-LoRa\UC300_Chirpstack
-      - UC300\UC300-LoRa\UC300_TTN
-      - UC3XXX\UC3XXX_Decoder
-      - UC500_Series\UC500_Chirpstack
-      - UC500_Series\UC500_TTN
-      - UC51x_Series\UC51x_decoder_Chirpstack
-      - UC51x_Series\UC51x_decoder_TTN
-      - VS121\VS121_Chirpstack
-      - VS121\VS121_TTN
-      - WS_Series\WS101\WS101_Chirpstack
-      - WS_Series\WS101\WS101_TTN
-      - WS_Series\WS136&WS156\WS136_WS156_Chirpstack
-      - WS_Series\WS136&WS156\WS136_WS156_TTN
-      - WS_Series\WS202\WS202_Chirpstack
-      - WS_Series\WS202\WS202_TTN
-      - WS_Series\WS301\WS301_Chirpstack
-      - WS_Series\WS301\WS301_TTN
-      - WS_Series\WS302\WS302_Chirpstack
-      - WS_Series\WS302\WS302_TTN
-      - WS_Series\WS50x\WS50x_uplink_Chirpstack
-      - WS_Series\WS50x\WS50x_uplink_TTN
-      - WS_Series\WS52x\WS52x_Chirpstack
-      - WS_Series\WS52x\WS52x_TTN
-      - WS_Series\WS558\WS558_Chirpstack
-      - WS_Series\WS558\WS558_TTN
+      - AM100_Series | AM100_Chirpstack
+      - AM100_Series | AM100_TTN
+      - AM300_Series | AM300_Chirpstack
+      - AM300_Series | AM300_TTN
+      - EM300_Series | EM300-MCS | EM300-MCS_Chirpstack
+      - EM300_Series | EM300-MCS | EM300-MCS_TTN
+      - EM300_Series | EM300-SLD | EM300-SLD_Chirpstack
+      - EM300_Series | EM300-SLD | EM300-SLD_TTN
+      - EM300_Series | EM300-TH | EM300-TH_Chirpstack
+      - EM300_Series | EM300-TH | EM300-TH_TTN
+      - EM310_Series | EM310-TILT | EM310-TILT_Chirpstack
+      - EM310_Series | EM310-TILT | EM310-TILT_TTN
+      - EM310_Series | EM310_UDL | EM310-UDL_Chirpstack
+      - EM310_Series | EM310_UDL | EM310-UDL_TTN
+      - EM500_Series | EM500-CO2 | EM500-CO2_Chirpstack
+      - EM500_Series | EM500-CO2 | EM500-CO2_TTN
+      - EM500_Series | EM500-LGT | EM500-LGT_Chirpstack
+      - EM500_Series | EM500-LGT | EM500-LGT_TTN
+      - EM500_Series | EM500-PP | EM500-PP_Chirpstack
+      - EM500_Series | EM500-PP | EM500-PP_TTN
+      - EM500_Series | EM500-PT100 | EM500-PT100_Chirpstack
+      - EM500_Series | EM500-PT100 | EM500-PT100_TTN
+      - EM500_Series | EM500-SMT | EM500-SMTC_Chirpstack
+      - EM500_Series | EM500-SMT | EM500-SMTC_TTN
+      - EM500_Series | EM500-SWL | EM500-SWL_Chirpstack
+      - EM500_Series | EM500-SWL | EM500-SWL_TTN
+      - EM500_Series | EM500-UDL | EM500-UDL_Chirpstack
+      - EM500_Series | EM500-UDL | EM500-UDL_TTN
+      - GS_Series | GS101 | GS101_Chirpstack
+      - GS_Series | GS101 | GS101_TTN
+      - GS_Series | GS534N | GS534N_Chirpstack
+      - GS_Series | GS534N | GS534N_TTN
+      - UC100 | UC100_Chirpstack
+      - UC100 | UC100_TTN
+      - UC11-N1 | UC11-N1_Chirpstack
+      - UC11-N1 | UC11-N1_TTN
+      - UC11-T1 | UC11-T1_Chirpstack
+      - UC11-T1 | UC11-T1_TTN
+      - UC11XX | UC11XX_Decoder_Chirpstack
+      - UC11XX | UC11XX_Decoder_TTN
+      - UC300 | UC300-LoRa | UC300_Chirpstack
+      - UC300 | UC300-LoRa | UC300_TTN
+      - UC3XXX | UC3XXX_Decoder
+      - UC500_Series | UC500_Chirpstack
+      - UC500_Series | UC500_TTN
+      - UC51x_Series | UC51x_decoder_Chirpstack
+      - UC51x_Series | UC51x_decoder_TTN
+      - VS121 | VS121_Chirpstack
+      - VS121 | VS121_TTN
+      - WS_Series | WS101 | WS101_Chirpstack
+      - WS_Series | WS101 | WS101_TTN
+      - WS_Series | WS136&WS156 | WS136_WS156_Chirpstack
+      - WS_Series | WS136&WS156 | WS136_WS156_TTN
+      - WS_Series | WS202 | WS202_Chirpstack
+      - WS_Series | WS202 | WS202_TTN
+      - WS_Series | WS301 | WS301_Chirpstack
+      - WS_Series | WS301 | WS301_TTN
+      - WS_Series | WS302 | WS302_Chirpstack
+      - WS_Series | WS302 | WS302_TTN
+      - WS_Series | WS50x | WS50x_uplink_Chirpstack
+      - WS_Series | WS50x | WS50x_uplink_TTN
+      - WS_Series | WS52x | WS52x_Chirpstack
+      - WS_Series | WS52x | WS52x_TTN
+      - WS_Series | WS558 | WS558_Chirpstack
+      - WS_Series | WS558 | WS558_TTN
 mounts: []
 tags:                                   # Array of tags.
   - 'NodeJS'
