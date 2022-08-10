@@ -3,7 +3,7 @@ const express = require('express')
 const app = express()
 const winston = require('winston')
 const expressWinston = require('express-winston')
-const { send, hexToBytes } = require('./utils/util')
+const { send, hexToBytes, getPropertyValue } = require('./utils/util')
 
 // initialization
 app.use(express.urlencoded({ extended: true }))
@@ -51,17 +51,17 @@ app.post('/', async (req, res) => {
   if (!DEVICE_DECODER) {
     return res.status(400).json({ status: false, message: 'Device decoder not selected.' })
   }
-  let inputPayload = {}
-  if (typeof json.payload === 'undefined') {
-    inputPayload = json
-  } else {
-    inputPayload = json.payload
-  }
   try {
     const decoderFile = `${DEVICE_DECODER.split(' | ').join('\\')}.js`
     const { Decode } = require(`./utils/${decoderFile}`)
-    const port = inputPayload.fPort || inputPayload.port || 0
-    const data = hexToBytes(LABEL ? inputPayload[LABEL] : inputPayload)
+    const port = json.fPort || json.port || 0
+    const readProperty = LABEL ? getPropertyValue(LABEL, json) : json
+    if (!readProperty) {
+      return res
+        .status(400)
+        .json({ status: false, message: `Error trying to read specified payload property: ${LABEL}` })
+    }
+    const data = hexToBytes(readProperty)
     const outputPayload = Decode(port, data)
     if (EGRESS_URLS) {
       await send(outputPayload)

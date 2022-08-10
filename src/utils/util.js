@@ -40,7 +40,18 @@ const hexToBytes = hexString => {
   return byteArray
 }
 
+const getPropertyValue = (prop, data, defVal) => {
+  if (typeof defVal === 'undefined') defVal = null
+  prop = prop.split('.')
+  for (let i = 0; i < prop.length; i++) {
+    if (typeof data[prop[i]] === 'undefined') return defVal
+    data = data[prop[i]]
+  }
+  return data
+}
+
 module.exports = {
   send,
   hexToBytes,
+  getPropertyValue,
 }
