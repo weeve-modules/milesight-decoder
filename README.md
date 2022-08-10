@@ -50,7 +50,7 @@ Example of incoming payload may look like this:
 | Environment Variables | type | Description |
 | --- | --- | --- |
 | DEVICE_DECODER | string | Drop down list with all currently supported device type decoders based on which we decode the payloads. |
-| LABEL | string | Name of the property in incoming payload that holds the data. |
+| LABEL | string | Name of the property in incoming payload that holds the data. Can be nested field like data.property1 |
 
 ### Module Specific
 
