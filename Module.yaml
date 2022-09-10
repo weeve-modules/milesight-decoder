@@ -91,7 +91,7 @@ envs:                                   # Array of environment variables that wi
       - WS_Series | WS52x | WS52x_TTN
       - WS_Series | WS558 | WS558_Chirpstack
       - WS_Series | WS558 | WS558_TTN
-     dependencies: []
+    dependencies: []
 ports: []
 envPorts: []
 devices: []
